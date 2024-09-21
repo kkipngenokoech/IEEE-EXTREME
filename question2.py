@@ -19,9 +19,6 @@ def get_number():
     except ValueError:
         return float(data)
 
-# numpy and scipy are available for use
-import numpy
-import scipy
 
 # WE START OUR CODE HERE
 
@@ -29,8 +26,10 @@ number_of_words = get_number() # number of words, from the standard input, you s
 def get_letters(words):
     letters = []
     for word in words:
-        get_letter = sorted(word)[0]
+        get_letter = sorted(word)[0] # TODO: you remember sorted() we talked about in question1.py? why are we adding [0]? alt for this? 
         letters.append(get_letter)
-    letters = ''.join(sorted(letters))
+    letters = ''.join(sorted(letters)) # TODO: sort again? why?
     return letters
-print(get_letters([get_word() for _ in range(number_of_words)]))
+print(get_letters([get_word() for _ in range(number_of_words)]))  # we talked about this in the first question
+
+# WE END OUR CODE HERE
